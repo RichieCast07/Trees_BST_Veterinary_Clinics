@@ -15,7 +15,7 @@ export class BST {
     }
 
     insertNode(node, newNode) {
-        if (newNode.serviceName < node.serviceName) {
+        if (newNode.servicePrice < node.servicePrice) {
             if (node.left === null) {
                 node.left = newNode;
             } else {
@@ -31,17 +31,17 @@ export class BST {
     }
 
     search(serviceName) {
-        return this.searchNode(this.root, serviceName);
+        return this.searchNodeByName(this.root, serviceName);
     }
 
-    searchNode(node, serviceName) {
+    searchNodeByName(node, serviceName) {
         if (node === null) {
             return null;
         }
         if (serviceName < node.serviceName) {
-            return this.searchNode(node.left, serviceName);
+            return this.searchNodeByName(node.left, serviceName);
         } else if (serviceName > node.serviceName) {
-            return this.searchNode(node.right, serviceName);
+            return this.searchNodeByName(node.right, serviceName);
         } else {
             return node;
         }
@@ -85,4 +85,3 @@ export class BST {
         }
     }
 }
-
