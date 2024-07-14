@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto de Venta Veterinaria</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Punto de Venta para Clínicas Veterinarias</h1>
+    </header>
+    
+    <section id="add-service">
+        <h2>Agregar Servicio</h2>
+        <form id="service-form">
+            <label for="service-name">Nombre del Servicio:</label>
+            <input type="text" id="service-name" required>
+            
+            <label for="service-price">Precio:</label>
+            <input type="number" id="service-price" required>
+            
+            <button type="submit">Agregar Servicio</button>
+        </form>
+    </section>
+    
+    <section id="search-service">
+        <h2>Buscar Servicios</h2>
+        <input type="text" id="search-name" placeholder="Buscar por nombre...">
+        <button id="search-button">Buscar</button>
+        <button id="show-all-button">Mostrar Todos los Servicios</button>
+        <button id="lowest-price-button">Precio Más Bajo</button>
+        <button id="highest-price-button">Precio Más Alto</button>
+    </section>
+    
+    <section id="service-list">
+        <h2>Lista de Servicios</h2>
+        <ul id="services"></ul>
+    </section>
+    
+    <script type="module" src="./src/controllers/dependencies.js"></script>
+</body>
+</html>
